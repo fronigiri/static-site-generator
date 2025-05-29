@@ -59,20 +59,6 @@ def generate_pages_recursive(dir_path_content, template_path, dest_dir_path, bas
         else:
             generate_pages_recursive(os.path.join(dir_path_content, file), template_path, os.path.join(dest_dir_path, file), basepath)
 
-
-    
-
-    
-
-
-
-
-
-            
-
-
-
-
 def main():
     if os.path.exists("docs"):
         shutil.rmtree("docs")
@@ -86,8 +72,6 @@ def main():
    
     copy_files_recursive(source_dir, docs_dir)
     generate_pages_recursive("content", "template.html", "docs", basepath)
-
-
 
 if __name__ == "__main__":
     main()
